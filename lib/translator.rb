@@ -12,7 +12,9 @@ end
 
 def get_japanese_emoticon(path, emoji)
   face_hash = load_library(path)
-  face_hash['get_emoticon'][emoji]
+  if !face_hash['get_emoticon'][emoji]
+    "Sorry that emoticon was not found"
+  end
 
 end
 
